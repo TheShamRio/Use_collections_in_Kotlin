@@ -14,22 +14,16 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.example.use_collections_in_kotlin.ui.theme.Use_collections_in_KotlinTheme
 
 fun main() {
-    val solarSystem = mutableListOf("Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune")
-    println(solarSystem[2])
-    println(solarSystem.get(3))
-    println(solarSystem.indexOf("Earth"))
-    println(solarSystem.indexOf("Pluto"))
-    for (planet in solarSystem) {
-        println(planet)
-    }
+    val solarSystem = mutableSetOf("Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune")
+    println(solarSystem.size)
     solarSystem.add("Pluto")
-    solarSystem.add(3, "Theia")
-    solarSystem[3] = "Future Moon"
-    println(solarSystem[3])
-    println(solarSystem[9])
-    solarSystem.removeAt(9)
-    solarSystem.remove("Future Moon")
+    println(solarSystem.size)
     println(solarSystem.contains("Pluto"))
-    println("Future Moon" in solarSystem)
+    solarSystem.add("Pluto")
+    println(solarSystem.size)
+    solarSystem.remove("Pluto")
+    println(solarSystem.size)
+    println(solarSystem.contains("Pluto"))
 }
+
 
